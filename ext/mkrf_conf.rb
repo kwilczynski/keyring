@@ -14,7 +14,7 @@ end
 
 inst = Gem::DependencyInstaller.new
 begin
-   puts "XXX-2"
+   fail "XXX-2"
   p inst
   if RUBY_PLATFORM =~ /linux/
     warn "*linux: installing gir_ffi-gnome_keyring..."
