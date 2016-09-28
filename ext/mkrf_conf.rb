@@ -4,7 +4,7 @@ require 'rubygems'
 require 'rubygems/command.rb'
 require 'rubygems/dependency_installer.rb' 
 
-fail 'XXX'
+#fail 'XXX'
 
 begin
   Gem::Command.build_args = ARGV
