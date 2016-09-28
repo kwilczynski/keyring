@@ -14,13 +14,15 @@ end
 
 inst = Gem::DependencyInstaller.new
 begin
-
+   puts "XXX-2"
+  p inst
   if RUBY_PLATFORM =~ /linux/
     warn "*linux: installing gir_ffi-gnome_keyring..."
     inst.install "gir_ffi-gnome_keyring", '~> 0.0.3'
   end
 
   if RUBY_PLATFORM =~ /darwin/
+     puts "XXX-3"
     warn '*osx: installing ruby-keychain'
     inst.install 'ruby-keychain', '~> 0.3.2'
   end
