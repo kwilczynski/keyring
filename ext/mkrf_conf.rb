@@ -15,7 +15,7 @@ begin
     inst.install "gir_ffi-gnome_keyring", '~> 0.0.3'
   end
 
-  if RUBY_PLATFORM =~ /darwin10/
+  if RUBY_PLATFORM =~ /darwin/
     warn '*osx: installing ruby-keychain'
     inst.install 'ruby-keychain', '~> 0.3.2'
   end
