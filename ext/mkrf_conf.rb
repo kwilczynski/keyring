@@ -8,8 +8,10 @@ fail 'XXX'
 
 begin
   Gem::Command.build_args = ARGV
-rescue NoMethodError
-end 
+rescue NoMethodError => e
+  puts "XXX-1 #{e}"
+end
+
 inst = Gem::DependencyInstaller.new
 begin
 
@@ -23,7 +25,8 @@ begin
     inst.install 'ruby-keychain', '~> 0.3.2'
   end
 
-rescue
+rescue => e
+  puts "XXX-2 #{e}"
   exit(1)
 end 
 
